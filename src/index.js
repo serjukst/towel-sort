@@ -12,7 +12,13 @@ module.exports = function towelSort (matrix) {
        return a + b;
      });
    }
- }
+  }
 
- return matrix.join(',').split(',');
+    let res = matrix.join(',').split(',');
+    
+    for (let j = 0; j < res.length; j++) {
+        res[j] = parseInt(res[j]);
+    }
+
+    return res;
 }
